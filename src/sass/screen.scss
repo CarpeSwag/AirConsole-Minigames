@@ -1,3 +1,7 @@
+// Compass mixins
+@import "compass/css3/box-sizing";
+
+// Main Screen
 body, html {
 	height: 100%;
 	margin: 0px;
@@ -28,3 +32,4 @@ body {
 	pointer-events: none;
 	text-align: center;
 }
+
