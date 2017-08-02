@@ -16,7 +16,49 @@
 }
 
 .minigame-description {
-
+	position: absolute;
+	background-color: $ui_red;
+	width: calc(100% - 4rem);
+	height: 20%;
+	left: 2rem;
+	bottom: 20px;
+	
+	// 1 1.732 1.414
+	
+	@include clip-path(polygon(
+		// Top left
+		0% 2rem,
+		0.518rem 1.932rem,
+		1rem 1.732rem,
+		1.414rem 1.414rem,
+		1.732rem 1rem,
+		1.932rem 0.518rem,
+		2rem 0%,
+		// Top right
+		calc(100% - 2rem) 0%,
+		calc(100% - 1.932rem) 0.518rem,
+		calc(100% - 1.732rem) 1rem,
+		calc(100% - 1.414rem) 1.414rem,
+		calc(100% - 1rem) 1.732rem,
+		calc(100% - 0.518rem) 1.932rem,
+		100% 2rem,
+		// Bottom right
+		100% calc(100% - 2rem),
+		calc(100% - 0.518rem) calc(100% - 1.932rem),
+		calc(100% - 1rem) calc(100% - 1.732rem),
+		calc(100% - 1.414rem) calc(100% - 1.414rem),
+		calc(100% - 1.732rem) calc(100% - 1rem),
+		calc(100% - 1.932rem) calc(100% - 0.518rem),
+		calc(100% - 2rem) 100%,
+		// Bottom left
+		2rem 100%,
+		1.932rem calc(100% - 0.518rem),
+		1.732rem calc(100% - 1rem),
+		1.414rem calc(100% - 1.414rem),
+		1rem calc(100% - 1.732rem),
+		0.518rem calc(100% - 1.932rem),
+		0% calc(100% - 2rem)
+	));
 }
 
 .top-banner {
