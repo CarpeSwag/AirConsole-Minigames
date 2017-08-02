@@ -49,6 +49,22 @@ PartyGame.Play.prototype = {
 	}
 };
 
+PartyGame.MiniGameInfo = function() {};
+PartyGame.MiniGameInfo.prototype = {
+	preload: function() {
+		
+	},
+	create: function() {
+		
+	},
+	update: function() {
+		
+	},
+	render: function() {
+		
+	}
+};
+
 PartyGame.End = function() {};
 PartyGame.End.prototype = {
 	preload: function() {
