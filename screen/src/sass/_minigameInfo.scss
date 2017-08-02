@@ -28,25 +28,48 @@
 	left: 7.5%;
 	top: 20px;
 	
-	&:before, &:after {
-		content: '';
+	#minigame-name {
+		margin: 10px 0px;
+		font-size: 40px;
+	}
+	
+	.left-tail, .right-tail {
 		background-color: $ui_red;
-		width: calc(40% + 35px);
+		width: calc(40% - 6px);
 		height: 40px;
 		top: 40px;
 		
 		// Stacking Layer
 		position: absolute;
 		z-index: -1;
+		
+		&:before {
+			content: '';
+			background-color: $ui_red;
+			position: absolute;
+			height: 60%;
+			top: 0;
+			width: calc(100% + 17px);
+		}
 	}
 	
-	&:before {
+	.left-tail {
 		left: -40%;
 		@include skewX(60deg);
+		
+		&:before {
+			left: 0;
+			@include skewX(-60deg);
+		}
 	}
 	
-	&:after {
+	.right-tail {
 		right: -40%;
 		@include skewX(-60deg);
+		
+		&:before {
+			right: 0;
+			@include skewX(60deg);
+		}
 	}
 }
