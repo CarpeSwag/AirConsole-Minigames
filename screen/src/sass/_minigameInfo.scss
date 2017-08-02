@@ -29,7 +29,12 @@
 	top: 20px;
 	
 	#minigame-name {
-		margin: 10px 0px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin: 10px 10px;
+		height: 40px;
+		width: calc(100% - 20px);
 		font-size: 40px;
 	}
 	
