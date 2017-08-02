@@ -1,0 +1,35 @@
+// Compass mixins
+@import "compass/css3/box-sizing";
+
+// Main Screen
+body, html {
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+	color: white;
+}
+
+body {
+	text-align: center;
+	font-family: Helvetica, sans-serif;
+	background-color: black;
+	text-align: center;
+}
+
+#game {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #999999;
+	box-sizing: border-box;
+}
+
+#info {
+	color: #c3b225;
+	position: absolute;
+	bottom: 2%;
+	left: 0;
+	width: 100%;
+	pointer-events: none;
+	text-align: center;
+}
+

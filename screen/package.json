@@ -1,10 +1,10 @@
 {
-  "name": "airconsole_game",
+  "name": "airconsole_game_screen",
   "version": "0.0.1",
   "description": "Minigame-based party game for AirConsole.",
   "main": "src/js/screen.js",
   "scripts": {
-    "build": "webpack && compass compile"
+    "build": "rm ../build/screen/ -rf && webpack && compass compile"
   },
   "repository": {
     "type": "git",
