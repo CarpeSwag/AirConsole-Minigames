@@ -18,7 +18,7 @@ module.exports = {
    },
    output: {
       filename: 'screen.js',
-      path: __dirname + '/build/screen'
+      path: __dirname + '/../build/screen'
    },
    plugins: [HTMLWebpackPluginConfig]
 };
