@@ -42,11 +42,11 @@
 	
 	&:before {
 		left: -40%;
-		transform: skewX(60deg);
+		@include skewX(60deg);
 	}
 	
 	&:after {
 		right: -40%;
-		transform: skewX(-60deg);
+		@include skewX(-60deg);
 	}
 }
