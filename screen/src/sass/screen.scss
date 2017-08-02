@@ -1,5 +1,12 @@
 // Compass mixins
 @import "compass/css3/box-sizing";
+@import "compass/css3/box-shadow";
+
+// Variables
+$ui_cream: #F1E8C7;
+$ui_darkgreen: #17453B;
+$ui_lightgreen: #92BAAF;
+$ui_red: #CB322A;
 
 // Main Screen
 body, html {
@@ -32,4 +39,7 @@ body {
 	pointer-events: none;
 	text-align: center;
 }
+
+// 
+@import "minigameInfo";
 
