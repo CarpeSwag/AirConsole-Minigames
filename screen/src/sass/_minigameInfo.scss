@@ -18,47 +18,65 @@
 .minigame-description {
 	position: absolute;
 	background-color: $ui_red;
-	width: calc(100% - 4rem);
+	width: 90%;
 	height: 20%;
-	left: 2rem;
+	min-height: 5rem;
+	left: 5%;
 	bottom: 20px;
 	
-	// 1 1.732 1.414
-	
+	// Rounded corners
 	@include clip-path(polygon(
 		// Top left
-		0% 2rem,
-		0.518rem 1.932rem,
-		1rem 1.732rem,
-		1.414rem 1.414rem,
-		1.732rem 1rem,
-		1.932rem 0.518rem,
-		2rem 0%,
+		0% 1.5rem,
+		0.389rem 1.449rem,
+		0.75rem 1.299rem,
+		1.061rem 1.061rem,
+		1.299rem 0.75rem,
+		1.449rem 0.389rem,
+		1.5rem 0%,
 		// Top right
-		calc(100% - 2rem) 0%,
-		calc(100% - 1.932rem) 0.518rem,
-		calc(100% - 1.732rem) 1rem,
-		calc(100% - 1.414rem) 1.414rem,
-		calc(100% - 1rem) 1.732rem,
-		calc(100% - 0.518rem) 1.932rem,
-		100% 2rem,
+		calc(100% - 1.5rem) 0%,
+		calc(100% - 1.449rem) 0.389rem,
+		calc(100% - 1.299rem) 0.75rem,
+		calc(100% - 1.061rem) 1.061rem,
+		calc(100% - 0.75rem) 1.299rem,
+		calc(100% - 0.389rem) 1.449rem,
+		100% 1.5rem,
 		// Bottom right
-		100% calc(100% - 2rem),
-		calc(100% - 0.518rem) calc(100% - 1.932rem),
-		calc(100% - 1rem) calc(100% - 1.732rem),
-		calc(100% - 1.414rem) calc(100% - 1.414rem),
-		calc(100% - 1.732rem) calc(100% - 1rem),
-		calc(100% - 1.932rem) calc(100% - 0.518rem),
-		calc(100% - 2rem) 100%,
+		100% calc(100% - 1.5rem),
+		calc(100% - 0.389rem) calc(100% - 1.449rem),
+		calc(100% - 0.75rem) calc(100% - 1.299rem),
+		calc(100% - 1.061rem) calc(100% - 1.061rem),
+		calc(100% - 1.299rem) calc(100% - 0.75rem),
+		calc(100% - 1.449rem) calc(100% - 0.389rem),
+		calc(100% - 1.5rem) 100%,
 		// Bottom left
-		2rem 100%,
-		1.932rem calc(100% - 0.518rem),
-		1.732rem calc(100% - 1rem),
-		1.414rem calc(100% - 1.414rem),
-		1rem calc(100% - 1.732rem),
-		0.518rem calc(100% - 1.932rem),
-		0% calc(100% - 2rem)
+		1.5rem 100%,
+		1.449rem calc(100% - 0.389rem),
+		1.299rem calc(100% - 0.75rem),
+		1.061rem calc(100% - 1.061rem),
+		0.75rem calc(100% - 1.299rem),
+		0.389rem calc(100% - 1.449rem),
+		0% calc(100% - 1.5rem)
 	));
+	
+	.inner {
+		margin: 1.25rem 2.5rem;
+		width: calc(100% - 5rem);
+		height: calc(100% - 2.5rem);
+		background-color: $ui_lightcream;
+		@include border-radius(1rem);
+		
+		#minigame-description {
+			color: #000000;
+			padding: 10px;
+			height: calc(100% - 30px);
+			overflow: hidden;
+			font-size: 22px;
+			text-overflow: ellipsis;
+			text-align: justify;
+		}
+	}
 }
 
 .top-banner {
@@ -74,7 +92,7 @@
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		margin: 10px 10px;
+		margin: 10px;
 		height: 40px;
 		width: calc(100% - 20px);
 		font-size: 40px;
