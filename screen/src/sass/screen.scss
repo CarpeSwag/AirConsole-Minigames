@@ -1,5 +1,17 @@
 // Compass mixins
 @import "compass/css3/box-sizing";
+@import "compass/css3/transform";
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+@import "myMixins";
+
+// Variables
+$ui_cream: #F1E8C7;
+$ui_lightcream: #F7F4E3;
+$ui_darkgreen: #17453B;
+$ui_lightgreen: #92BAAF;
+$ui_red: #CB322A;
 
 // Main Screen
 body, html {
@@ -20,7 +32,7 @@ body {
 	width: 100%;
 	height: 100%;
 	border: 1px solid #999999;
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 }
 
 #info {
@@ -32,4 +44,7 @@ body {
 	pointer-events: none;
 	text-align: center;
 }
+
+// 
+@import "minigameInfo";
 

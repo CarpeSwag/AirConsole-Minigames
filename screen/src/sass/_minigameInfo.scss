@@ -1,0 +1,257 @@
+#minigame-info {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	
+	background-color: $ui_cream;
+}
+
+.player-ribbons {
+	position: absolute;
+	top: 100px;
+	bottom: calc(20% + 40px);
+	left: 5%;
+	width: 90%;
+	padding-top: 20px;
+	
+	.left-ribbons, .right-ribbons {
+		position: absolute;
+		height: 100%;
+		width: calc(16.6667% - 6px);
+		
+		.player-ribbon {
+			position: relative;
+			overflow: hidden;
+			background-color: $ui_darkgreen;
+			height: calc(11% - 20px);
+			margin-top: 10px;
+			padding: 5px;
+			
+			h5 {
+				position: absolute;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				top: calc(50% - 10px);
+				width: calc(100% - 20px);
+				margin: 0;
+				font-size: 20px;
+			}
+		}
+	}
+	
+	.left-ribbons {
+		left: 0;
+		
+		.player-ribbon {
+			padding-left: 15px;
+			@include clip-path(polygon(
+				0% 0%,
+				100% 0%,
+				100% 100%,
+				0% 100%,
+				10px 50%
+			));
+		}
+	}
+	
+	.right-ribbons {
+		right: 0;
+		
+		.player-ribbon {
+			padding-right: 15px;
+			@include clip-path(polygon(
+				0% 0%,
+				100% 0%,
+				calc(100% - 10px) 50%,
+				100% 100%,
+				0% 100%
+			));
+		}
+	}
+}
+
+.minigame-preview {
+	position: absolute;
+	background-color: $ui_darkgreen;
+	top: 80px;
+	bottom: calc(25% + 40px);
+	left: 20%;
+	width: 60%;
+	@include border-radius(1rem);
+	@include box-shadow(
+		0 0 0 2px rgba($ui_lightgreen,1),
+		0 0 0 4px rgba($ui_darkgreen,1)
+	);
+	
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: $ui_lightcream;
+		width: calc(100% - 60px);
+		height: calc(100% - 60px);
+		top: 30px;
+		left: 30px;
+		@include border-radius(3rem);
+	}
+	
+	.inner {
+		position: absolute;
+		width: calc(100% - 124px);
+		height: calc(100% - 124px);
+		top: 58px;
+		left: 58px;
+		border: solid 2px $ui_darkgreen;
+		@include border-radius(1rem);
+		overflow: hidden;
+		background-color: #000000;
+		
+		#minigame-preview {
+			width: 100%;
+			height: 100%;
+			background-image: url(https://media.giphy.com/media/119xp13BvQso9O/giphy.gif);
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+		
+		#minigame-blurb {
+			position: absolute;
+			margin: 0;
+			bottom: 0px;
+			height: 25px;
+			width: 100%;
+			background-color: rgba($ui_cream, 0.80);
+			font-size: 20px;
+			padding: 5px;
+			color: $ui_darkgreen;
+		}
+	}
+}
+
+.minigame-description {
+	position: absolute;
+	background-color: $ui_red;
+	width: 90%;
+	height: 25%;
+	min-height: 5rem;
+	left: 5%;
+	bottom: 20px;
+	
+	// Rounded corners
+	@include clip-path(polygon(
+		// Top left
+		0% 1.5rem,
+		0.389rem 1.449rem,
+		0.75rem 1.299rem,
+		1.061rem 1.061rem,
+		1.299rem 0.75rem,
+		1.449rem 0.389rem,
+		1.5rem 0%,
+		// Top right
+		calc(100% - 1.5rem) 0%,
+		calc(100% - 1.449rem) 0.389rem,
+		calc(100% - 1.299rem) 0.75rem,
+		calc(100% - 1.061rem) 1.061rem,
+		calc(100% - 0.75rem) 1.299rem,
+		calc(100% - 0.389rem) 1.449rem,
+		100% 1.5rem,
+		// Bottom right
+		100% calc(100% - 1.5rem),
+		calc(100% - 0.389rem) calc(100% - 1.449rem),
+		calc(100% - 0.75rem) calc(100% - 1.299rem),
+		calc(100% - 1.061rem) calc(100% - 1.061rem),
+		calc(100% - 1.299rem) calc(100% - 0.75rem),
+		calc(100% - 1.449rem) calc(100% - 0.389rem),
+		calc(100% - 1.5rem) 100%,
+		// Bottom left
+		1.5rem 100%,
+		1.449rem calc(100% - 0.389rem),
+		1.299rem calc(100% - 0.75rem),
+		1.061rem calc(100% - 1.061rem),
+		0.75rem calc(100% - 1.299rem),
+		0.389rem calc(100% - 1.449rem),
+		0% calc(100% - 1.5rem)
+	));
+	
+	.inner {
+		margin: 1.25rem 2.5rem;
+		width: calc(100% - 5rem);
+		height: calc(100% - 2.5rem);
+		background-color: $ui_lightcream;
+		@include border-radius(1rem);
+		
+		#minigame-description {
+			color: #000000;
+			padding: 10px;
+			height: calc(100% - 30px);
+			overflow: hidden;
+			font-size: 22px;
+			text-overflow: ellipsis;
+			text-align: justify;
+		}
+	}
+}
+
+.top-banner {
+	position: relative;
+	background-color: $ui_red;
+	border: solid 2px $ui_cream;
+	width: calc(60% + 80px);
+	height: 60px;
+	left: calc(20% - 42px);
+	top: 20px;
+	
+	#minigame-name {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		margin: 10px;
+		height: 40px;
+		width: calc(100% - 20px);
+		font-size: 40px;
+		color: $ui_lightcream;
+	}
+	
+	.left-tail, .right-tail {
+		background-color: $ui_red;
+		width: 100%;
+		height: 40px;
+		top: 40px;
+		
+		// Stacking Layer
+		position: absolute;
+		z-index: -1;
+		
+		&:before {
+			content: '';
+			background-color: $ui_red;
+			position: absolute;
+			height: 60%;
+			top: 0;
+			width: calc(100% + 17px);
+		}
+	}
+	
+	.left-tail {
+		left: calc(-100% - 6px);
+		@include skewX(60deg);
+		
+		&:before {
+			left: 0;
+			@include skewX(-60deg);
+		}
+	}
+	
+	.right-tail {
+		right: calc(-100% - 6px);
+		@include skewX(-60deg);
+		
+		&:before {
+			right: 0;
+			@include skewX(60deg);
+		}
+	}
+}
