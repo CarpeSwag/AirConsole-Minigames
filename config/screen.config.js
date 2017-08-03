@@ -1,12 +1,12 @@
 var HTMLWebpackPlugin = require('html-webpack-plugin');
 var HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
-   template: __dirname + '/src/controller/controller.html',
-   filename: 'controller.html',
+   template: __dirname + '/../src/screen/screen.html',
+   filename: 'screen.html',
    inject: 'body'
 });
 
 module.exports = {
-   entry: __dirname + '/src/controller/controller.js',
+   entry: __dirname + '/../src/screen/screen.js',
    module: {
       loaders: [
          {
@@ -17,8 +17,8 @@ module.exports = {
       ]
    },
    output: {
-      filename: 'controller.js',
-      path: __dirname + '/build/controller'
+      filename: 'screen.js',
+      path: __dirname + '/../build/screen'
    },
    plugins: [HTMLWebpackPluginConfig]
 };
