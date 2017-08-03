@@ -12,7 +12,28 @@
 }
 
 .minigame-preview {
-
+	position: absolute;
+	background-color: $ui_darkgreen;
+	top: 80px;
+	bottom: calc(20% + 40px);
+	left: 15%;
+	width: 70%;
+	@include border-radius(1rem);
+	@include box-shadow(
+		0 0 0 2px rgba($ui_lightgreen,1),
+		0 0 0 4px rgba($ui_darkgreen,1)
+	);
+	
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: $ui_lightcream;
+		width: 95%;
+		height: 95%;
+		top: 2.5%;
+		left: 2.5%;
+		@include border-radius(2rem);
+	}
 }
 
 .minigame-description {
@@ -96,6 +117,7 @@
 		height: 40px;
 		width: calc(100% - 20px);
 		font-size: 40px;
+		color: $ui_lightcream;
 	}
 	
 	.left-tail, .right-tail {
