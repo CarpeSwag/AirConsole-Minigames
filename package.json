@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/PrivateBrownBeard/Summer-2017-#readme",
   "dependencies": {
-    "phaser": "^3.0.0-alpha.2"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
