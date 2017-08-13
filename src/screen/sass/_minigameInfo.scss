@@ -1,3 +1,9 @@
+$minigame_info_primary: $red;
+$minigame_info_secondary: $darkgreen;
+$minigame_info_secondaryLight: $lightgreen;
+$minigame_info_back: $cream;
+$minigame_info_backLight: $lightcream;
+
 #minigame-info {
 	position: fixed;
 	top: 0;
@@ -5,7 +11,7 @@
 	width: 100%;
 	height: 100%;
 	
-	background-color: $ui_cream;
+	background-color: $minigame_info_back;
 	display: none;
 	
 	&.active {
@@ -29,7 +35,7 @@
 		.player-ribbon {
 			position: relative;
 			overflow: hidden;
-			background-color: $ui_darkgreen;
+			background-color: $minigame_info_secondary;
 			height: calc(11% - 20px);
 			margin-top: 10px;
 			padding: 5px;
@@ -80,21 +86,21 @@
 
 .minigame-preview {
 	position: absolute;
-	background-color: $ui_darkgreen;
+	background-color: $minigame_info_secondary;
 	top: 80px;
 	bottom: calc(25% + 40px);
 	left: 20%;
 	width: 60%;
 	@include border-radius(1rem);
 	@include box-shadow(
-		0 0 0 2px rgba($ui_lightgreen,1),
-		0 0 0 4px rgba($ui_darkgreen,1)
+		0 0 0 2px rgba($minigame_info_secondaryLight,1),
+		0 0 0 4px rgba($minigame_info_secondary,1)
 	);
 	
 	&:before {
 		content: '';
 		position: absolute;
-		background-color: $ui_lightcream;
+		background-color: $minigame_info_backLight;
 		width: calc(100% - 60px);
 		height: calc(100% - 60px);
 		top: 30px;
@@ -108,7 +114,7 @@
 		height: calc(100% - 124px);
 		top: 58px;
 		left: 58px;
-		border: solid 2px $ui_darkgreen;
+		border: solid 2px $minigame_info_secondary;
 		@include border-radius(1rem);
 		overflow: hidden;
 		background-color: #000000;
@@ -128,17 +134,17 @@
 			bottom: 0px;
 			height: 25px;
 			width: 100%;
-			background-color: rgba($ui_cream, 0.80);
+			background-color: rgba($minigame_info_back, 0.80);
 			font-size: 20px;
 			padding: 5px;
-			color: $ui_darkgreen;
+			color: $minigame_info_secondary;
 		}
 	}
 }
 
 .minigame-description {
 	position: absolute;
-	background-color: $ui_red;
+	background-color: $minigame_info_primary;
 	width: 90%;
 	height: 25%;
 	min-height: 5rem;
@@ -185,7 +191,7 @@
 		margin: 1.25rem 2.5rem;
 		width: calc(100% - 5rem);
 		height: calc(100% - 2.5rem);
-		background-color: $ui_lightcream;
+		background-color: $minigame_info_backLight;
 		@include border-radius(1rem);
 		
 		#minigame-description {
@@ -202,8 +208,8 @@
 
 .top-banner {
 	position: relative;
-	background-color: $ui_red;
-	border: solid 2px $ui_cream;
+	background-color: $minigame_info_primary;
+	border: solid 2px $minigame_info_back;
 	width: calc(60% + 80px);
 	height: 60px;
 	left: calc(20% - 42px);
@@ -213,15 +219,16 @@
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		margin: 10px;
-		height: 40px;
+		margin: 0px;
+		margin-top: 10px;
+		height: 50px;
 		width: calc(100% - 20px);
 		font-size: 40px;
-		color: $ui_lightcream;
+		color: $minigame_info_backLight;
 	}
 	
 	.left-tail, .right-tail {
-		background-color: $ui_red;
+		background-color: $minigame_info_primary;
 		width: 100%;
 		height: 40px;
 		top: 40px;
@@ -232,7 +239,7 @@
 		
 		&:before {
 			content: '';
-			background-color: $ui_red;
+			background-color: $minigame_info_primary;
 			position: absolute;
 			height: 60%;
 			top: 0;
