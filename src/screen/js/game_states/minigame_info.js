@@ -33,5 +33,9 @@ module.exports.prototype = {
 	},
 	render: function() {
 		
+	},
+	startMinigame: function() {
+		var container = document.getElementById('minigame-info');
+		container.className = '';
 	}
 };
