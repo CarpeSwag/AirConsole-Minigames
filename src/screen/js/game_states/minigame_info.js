@@ -22,6 +22,10 @@ module.exports.prototype = {
 		var desc = document.getElementById('minigame-description');
 		desc.innerHTML = '';
 		
+		var gif = 'https://media.giphy.com/media/119xp13BvQso9O/giphy.gif';
+		var preview = document.getElementById('minigame-preview');
+		preview.style = 'background-image: url(' + gif + ');';
+		
 		var container = document.getElementById('minigame-info');
 		container.className = 'active';
 	},
