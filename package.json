@@ -26,8 +26,7 @@
     "url": "https://github.com/PrivateBrownBeard/Summer-2017-/issues"
   },
   "homepage": "https://github.com/PrivateBrownBeard/Summer-2017-#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
