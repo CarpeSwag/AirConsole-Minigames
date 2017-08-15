@@ -18,8 +18,7 @@ module.exports = {
    },
    output: {
       filename: 'controller.js',
-      path: __dirname + '/../build/controller'
+      path: __dirname + '/../build'
    },
    plugins: [HTMLWebpackPluginConfig]
 };
-
