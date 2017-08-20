@@ -24,8 +24,11 @@ $mainmenu_backLight: $lightcream;
 	position: relative;
 	width: calc(60% + 80px);
 	margin-left: calc(20% - 42px);
-	height: 100px;
+	height: 90px;
 	margin-top: 40px;
+	font-size: 70px;
+	padding-top: 10px;
+	color: $mainmenu_backLight;
 }
 
 #main-menu-newgame {
