@@ -47,6 +47,12 @@ body {
 	text-align: center;
 }
 
-// 
+// UI Elements
+@import "uiElements";
+
+// Main Menu
+@import "mainmenu";
+
+// Minigame Info Screen
 @import "minigameInfo";
 
