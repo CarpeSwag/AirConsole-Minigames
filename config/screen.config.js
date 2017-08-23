@@ -13,6 +13,10 @@ module.exports = {
             test: /\.js$/,
             exclude: /node_modules/,
             loader: 'babel-loader'
+         },
+		 {
+            tes	t: /\.html$/,
+            loader: 'raw-loader!html-minifier-loader'
          }
       ]
    },

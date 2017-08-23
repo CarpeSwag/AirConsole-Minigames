@@ -7,12 +7,12 @@
     "build": "npm run buildScreen && npm run buildController",
     "buildScreen": "npm run webpackScreen && npm run compassScreen",
     "buildController": "npm run webpackController && npm run compassController",
-	"webpackBoth": "npm run webpackScreen && npm run webpackController", 
-	"webpackScreen": "webpack --config config/screen.config.js", 
-	"webpackController": "webpack --config config/controller.config.js",
-	"compassBoth": "npm run compassScreen && npm run compassController",
-	"compassScreen": "compass compile -c config/screen.config.rb",
-	"compassController": "compass compile -c config/controller.config.rb",
+    "webpackBoth": "npm run webpackScreen && npm run webpackController",
+    "webpackScreen": "webpack --config config/screen.config.js",
+    "webpackController": "webpack --config config/controller.config.js",
+    "compassBoth": "npm run compassScreen && npm run compassController",
+    "compassScreen": "compass compile -c config/screen.config.rb",
+    "compassController": "compass compile -c config/controller.config.rb",
     "clean": "rm ./build/ -rf"
   },
   "repository": {
@@ -36,6 +36,9 @@
     "babel-loader": "^7.1.1",
     "html-webpack-plugin": "^2.30.1",
     "script-loader": "^0.7.0",
-    "webpack": "^3.4.1"
+    "webpack": "^3.4.1",
+    "css-loader": "^0.28.5",
+    "html-minifier": "^3.5.3",
+    "html-minifier-loader": "^1.4.0"
   }
 }
